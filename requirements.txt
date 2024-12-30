@@ -1,9 +1,8 @@
 deepgram
 decouple
 yt_dlp
-streamlit==1.29.0
-langchain==0.0.345
-tenacity==8.2.3
-transformers==4.35.2
-torch==2.1.1
---extra-index-url https://download.pytorch.org/whl/cpu
+streamlit
+langchain
+tenacity
+transformers
+
