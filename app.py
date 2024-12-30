@@ -1,11 +1,13 @@
 import streamlit as st
+import os
 from download import download_audio_from_url
 from summarize import summarize_transcript
 from transcribe import transcribe_audio
 
+# Required for Koyeb deployment
+os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
 
 st.set_page_config(page_title="YT Summariser",page_icon="📜",layout="wide")
-
 st.title("YT Summariser",anchor=False)
 st.header("Summarise any YouTube video in seconds!",anchor=False)
 
@@ -30,3 +32,8 @@ if url:
         
         st.subheader("Summary:",anchor=False)
         st.write(summary)
+
+if __name__ == '__main__':
+    # This ensures the app runs on Koyeb's port
+    port = int(os.environ.get('PORT', 8501))
+    st.run(port=port)
