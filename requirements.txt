@@ -4,4 +4,4 @@ streamlit
 langchain
 tenacity
 transformers
-
+langchain community
