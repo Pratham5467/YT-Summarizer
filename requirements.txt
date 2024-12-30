@@ -1,4 +1,3 @@
-deepgram
 decouple
 yt_dlp
 streamlit
